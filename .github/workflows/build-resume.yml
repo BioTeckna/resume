@@ -8,6 +8,7 @@ on:
       - '**.tex'
       - '**.cls'
       - '!Dockerfile'
+      - '.github/workflows/build-resume.yml'
 
 jobs:
   build_resume:
@@ -19,7 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: |
+      - name: inject secret vars into container
+        run: |
           echo '${{ secrets.MAIL }}' > mail.tex && \
           echo '${{ secrets.ADDRESS }}' > address.tex && \
           echo '${{ secrets.PHONE }}' > phone.tex
@@ -29,11 +31,23 @@ jobs:
           xelatex damientourde.tex
 
       - uses: "marvinpinto/action-automatic-releases@latest"
-        name: "push resume on Github release"
+        name: "push resume on Github release - latest"
+        if: "contains(github.event.ref, 'refs/heads/main')"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
+          title: "Resume"
+          files: |
+            damientourde.pdf
+      
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        name: "push resume on Github release - feature"
+        if: "contains(github.event.ref, 'feature')"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "draft"
+          draft: true
           title: "Resume"
           files: |
             damientourde.pdf
