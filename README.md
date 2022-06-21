@@ -11,7 +11,7 @@ Repository to host, build and publish my resume.
 ## Comment
 
 Utilise awesomecv class.
-Génère un .pdf à la fois et vient se ranger dans 'latest' à chaque fois.
+Génère un .pdf à la fois et vient se ranger dans `latest` à chaque fois.
 
 ## Build your own
 
