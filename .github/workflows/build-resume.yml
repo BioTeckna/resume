@@ -28,7 +28,7 @@ jobs:
 
       - name: build with Xelatex
         run: |
-          xelatex damientourde.tex
+          xelatex julienchampenois.tex
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         name: "push resume on Github release - latest"
@@ -39,7 +39,7 @@ jobs:
           prerelease: false
           title: "Resume"
           files: |
-            damientourde.pdf
+            julienchampenois.pdf
       
       - uses: "marvinpinto/action-automatic-releases@latest"
         name: "push resume on Github release - feature"
@@ -50,4 +50,4 @@ jobs:
           draft: true
           title: "Resume"
           files: |
-            damientourde.pdf
+            julienchampenois.pdf
