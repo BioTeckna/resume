@@ -23,7 +23,7 @@ jobs:
       - name: inject secret vars into container
         run: |
           echo '${{ secrets.MAIL }}' > mail.tex && \
-          echo '${{ secrets.MICHEL }}' > michel.tex && \
+          echo '${{ secrets.ADDRESS }}' > address.tex && \
           echo '${{ secrets.PHONE }}' > phone.tex 
 
       - name: build with Xelatex
