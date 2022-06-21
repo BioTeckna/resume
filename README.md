@@ -20,6 +20,9 @@ My resume is built with AwesomeCV Latex class, created by *posquit0* which you c
 
 I modified the font size of paragraph section, space between sections, and removed mail href.
 
-Il faut juste rajouter les variables secrets dans les Settings du Repository > Security > Secrets > Actions et dans le menu Repository Secrets rajouter ADDRESS, MAIL et PHONE.
+1- Fork ce projet
+2- Il faut juste rajouter les variables secrets dans les `Settings` du Repository > Security > Secrets > Actions et dans le menu Repository Secrets rajouter `ADDRESS`, `MAIL` et `PHONE`.
 
-Ensuite, customiser dans le dossier resume les différents .tex ainsi qu'à la racine du projet le fichier prenomnom.tex.
+![var_env](https://user-images.githubusercontent.com/3942982/174826487-5fe8f339-5e63-46cc-bbc3-e2c501e40966.png)
+
+3- Ensuite, customiser dans le dossier `resume` les différents `.tex` ainsi qu'à la racine du projet le fichier `prenomnom.tex`.
