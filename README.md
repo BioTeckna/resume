@@ -1,17 +1,17 @@
-# Damien TOURDE's resume in LaTeX
+# CV Julien Champenois en LaTeX
 
-## Why ?
+## Pourquoi ?
 
-I'm not a front-end dev, but rather a DevOps specialist.  
-So I don't create a SPA page to show who I am and what I can do, I just build & publish my resume through CI/CD pipeline :)
+C'est toujours compliqué de maintenir à jour un CV sous Word. J'avais l'habitude de les faire sous powerpoint mais je me suis dit qu'il y avait surement un moyen plus 'as-a-code'.  
 
-## Purpose
+## Intérêt
 
 Repository to host, build and publish my resume.
 
-## Resume
+## Comment
 
-Build with awesomecv class, find it in release section, there is only 1 CV at a time, I publish on the same `latest` tag each time.
+Utilise awesomecv class.
+Génère un .pdf à la fois et vient se ranger dans 'latest' à chaque fois.
 
 ## Build your own
 
