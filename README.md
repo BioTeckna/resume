@@ -8,7 +8,7 @@ C'est toujours compliqué de maintenir à jour un CV sous Word. J'avais l'habitu
 
 Repository to host, build and publish my resume.
 
-## Comment
+## Comment ?
 
 Utilise awesomecv class.
 Génère un .pdf à la fois et vient se ranger dans `latest` à chaque fois.
